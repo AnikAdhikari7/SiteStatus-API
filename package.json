@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "NODE_ENV=staging nodemon index",
+    "production": "NODE_ENV=production nodemon index"
+  },
+  "devDependencies": {
+    "eslint": "8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.0.3"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "g": "^2.0.1",
+    "nodemon": "^3.0.1"
+  }
+}
