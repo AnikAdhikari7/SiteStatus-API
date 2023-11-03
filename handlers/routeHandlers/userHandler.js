@@ -1,13 +1,12 @@
-const handler = require("../../helpers/handleReqRes");
 const data = require("../../lib/data");
 const { hash } = require("../../helpers/utilities");
 const { user } = require("../../routes");
 const { parseJSON } = require("../../helpers/utilities");
 const tokenHandler = require("./tokenHandler");
 
-const handle = {};
+const handler = {};
 
-handle.userHandler = (requestProperties, callback) => {
+handler.userHandler = (requestProperties, callback) => {
     const acceptedMethods = ["get", "post", "put", "delete"];
     if (acceptedMethods.indexOf(requestProperties.method) > -1) {
         handler._users[requestProperties.method](requestProperties, callback);
@@ -230,4 +229,4 @@ handler._users.delete = (requestProperties, callback) => {
         callback(400, { error: "There was a problem in your request..." });
     }
 };
-module.exports = handle;
+module.exports = handler;
